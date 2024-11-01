@@ -6,7 +6,9 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import com.hannhb.message.core.ui.BaseViewModel
 import com.hannhb.message.module.message.domain.model.entities.Message
-import vn.hannhb.message.module.message.domain.usercase.*
+import com.hannhb.message.module.message.domain.usercase.GetFavouriteMessagesUseCase
+import com.hannhb.message.module.message.domain.usercase.GetNormalMessageUserCase
+import com.hannhb.message.module.message.domain.usercase.SaveMessageUseCase
 
 class MessageViewModel(
     private val getFavouriteMessagesUseCase: GetFavouriteMessagesUseCase,

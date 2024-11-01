@@ -81,6 +81,7 @@ android {
 
 dependencies {
     implementation(project(":rv-adapter"))
+    implementation(libs.androidx.junit.ktx)
     val nav_version = "2.8.3"
     // Jetpack Compose integration
     implementation("androidx.navigation:navigation-compose:$nav_version")
@@ -144,6 +145,12 @@ dependencies {
 //    implementation("io.insert-koin:koin-androidx-compose-navigation:$koin_version")
     implementation("io.insert-koin:koin-core:$koin_version")
     implementation("io.insert-koin:koin-core-viewmodel:$koin_version")
+    testImplementation("io.insert-koin:koin-test:$koin_version")
+    // Needed JUnit version
+    testImplementation("io.insert-koin:koin-test-junit4:$koin_version")
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+    testImplementation("androidx.arch.core:core-testing:2.1.0")
 
 
     implementation("com.android.support:recyclerview-v7:28.0.0")
